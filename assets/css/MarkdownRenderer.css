@@ -1,0 +1,8 @@
+.markdown-renderer {
+  line-height: 1.65;
+}
+
+.markdown-renderer img {
+  border-radius: 10px;
+  margin: 14px 0;
+}

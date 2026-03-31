@@ -1,0 +1,33 @@
+import { Link } from "react-router-dom"
+import type { PostCard as PostCardData } from "@shared/contracts/loadCards"
+import "../../assets/css/PostCard.css"
+
+type PostCardProps = {
+  post: PostCardData
+  to: string
+}
+
+export default function PostCard({ post, to }: PostCardProps) {
+  return (
+    <Link to={to} state={{ postId: post.id }} className="post-card">
+      <div className="post-card-media">
+        <img
+          src={post.banner_url}
+          alt={post.title}
+          loading="lazy"
+          className="post-card-image"
+        />
+      </div>
+
+      <div className="post-card-content">
+        <h3 className="post-card-title">
+          {post.title}
+        </h3>
+
+        <p className="post-card-preview">
+          {post.preview}
+        </p>
+      </div>
+    </Link>
+  )
+}
