@@ -30,7 +30,7 @@ export default function MarkdownRenderer({ markdown, postId, className }: Markdo
         rehypePlugins={[[rehypeRaw], [rehypeSanitize, sanitizeSchema]]}
         urlTransform={(url, key) => transformMarkdownAssetUrl(url, key, postId)}
         components={{
-          img: ({ node, ...props }) => <img loading="lazy" decoding="async" {...props} />
+          img: (props) => <img loading="lazy" decoding="async" {...props} />
         }}
       >
         {markdown}
