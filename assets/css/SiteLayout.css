@@ -14,24 +14,3 @@
   margin: 0 auto;
   padding: 32px 24px 8px;
 }
-
-.site-layout-orb {
-  position: fixed;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.site-layout-orb-accent {
-  inset: auto -120px -120px auto;
-  width: 280px;
-  height: 280px;
-  background: radial-gradient(circle, rgba(218, 0, 0, 0.24) 0%, rgba(218, 0, 0, 0) 68%);
-}
-
-.site-layout-orb-soft {
-  inset: 70px auto auto -110px;
-  width: 250px;
-  height: 250px;
-  background: radial-gradient(circle, var(--color-surface-soft) 0%, transparent 66%);
-  opacity: 0.6;
-}

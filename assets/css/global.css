@@ -2,7 +2,7 @@
 
 :root {
   color-scheme: dark;
-  --color-background: #101113;
+  --color-background: #1a1c1f;
   --color-surface: #191b1f;
   --color-surface-soft: #22252b;
   --color-border: #2f333b;
@@ -24,10 +24,7 @@ body,
 body {
   margin: 0;
   font-family: "Urbanist", sans-serif;
-  background:
-    radial-gradient(circle at 8% 6%, rgba(218, 0, 0, 0.2), transparent 36%),
-    radial-gradient(circle at 92% 94%, rgba(218, 0, 0, 0.14), transparent 32%),
-    var(--color-background);
+  background: var(--color-background);
   color: var(--color-text);
 }
 

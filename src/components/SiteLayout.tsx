@@ -15,10 +15,6 @@ export default function SiteLayout() {
       </main>
 
       <AppFooter />
-
-      <div aria-hidden className="site-layout-orb site-layout-orb-accent" />
-
-      <div aria-hidden className="site-layout-orb site-layout-orb-soft" />
     </div>
   )
 }
