@@ -13,6 +13,8 @@ function App() {
 
       <Route element={<SiteLayout />}>
         <Route path="/menu" element={<MenuPage />} />
+        <Route path="/apostas" element={<MenuPage title="Apostas" />} />
+        <Route path="/cassino" element={<MenuPage title="Cassino" />} />
 
         <Route
           path="/promocoes"

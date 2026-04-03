@@ -9,10 +9,10 @@
 .app-header-container {
   max-width: none;
   margin: 0;
-  padding: 8px 12px;
+  padding: 4px 50px;
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 18px;
 }
 
 .app-header-logo-link {
@@ -21,23 +21,23 @@
 }
 
 .app-header-logo {
-  width: 104px;
+  width: 88px;
   height: auto;
 }
 
 .app-header-nav {
   display: flex;
-  gap: 18px;
+  gap: 14px;
   align-items: center;
 }
 
 .app-header-nav-link {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   letter-spacing: 0.03em;
   color: var(--color-text-muted);
   border-bottom: 2px solid transparent;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
   transition: color 180ms ease, border-color 180ms ease;
 }
 
