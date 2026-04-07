@@ -12,5 +12,11 @@
 .site-layout-main-container {
   max-width: none;
   margin: 0;
-  padding: 28px 60px 8px;
+  padding: 28px clamp(14px, 4.2vw, 60px) 8px; 
+}
+
+@media (max-width: 640px) {
+  .site-layout-main-container {
+    padding: 20px 12px 8px; 
+  }
 }

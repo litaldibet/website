@@ -1,7 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Urbanist:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap"); 
+
+@font-face {
+  font-family: "Informa";
+  src: local("Informa"), local("Informa Medium"), local("Informa Regular"); 
+  font-display: swap;
+}
 
 :root {
   color-scheme: dark;
+  --font-primary: "Informa", "Urbanist", sans-serif; 
+  --font-heading: "Informa", "Urbanist", sans-serif; 
   --color-background: #1a1c1f;
   --color-surface: #191b1f;
   --color-surface-soft: #22252b;
@@ -23,9 +31,10 @@ body,
 
 body {
   margin: 0;
-  font-family: "Urbanist", sans-serif;
+  font-family: var(--font-primary); 
   background: var(--color-background);
   color: var(--color-text);
+  overflow-x: hidden; 
 }
 
 a {

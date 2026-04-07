@@ -4,7 +4,7 @@ import "../../assets/css/AppHeader.css"
 
 const navItems = [
   { label: "Menu", path: "/menu" },
-  { label: "Apostas", path: "/apostas" },
+  { label: "Apostas esportivas", path: "/apostas" },
   { label: "Cassino", path: "/cassino" },
   { label: "Promoções", path: "/promocoes" },
   { label: "Blog", path: "/blog" },

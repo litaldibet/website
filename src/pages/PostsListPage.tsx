@@ -99,6 +99,7 @@ export default function PostsListPage({ title, category, routePrefix }: PostsLis
               key={post.id}
               post={post}
               to={`${routePrefix}/${encodeURIComponent(post.slug)}`}
+              sourceListPath={routePrefix}
             />
           ))}
         </div>
