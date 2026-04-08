@@ -13,8 +13,7 @@ function App() {
 
       <Route element={<SiteLayout />}>
         <Route path="/menu" element={<MenuPage />} />
-        <Route path="/apostas" element={<Navigate to="/apostas-esportivas" replace />} />
-        <Route path="/apostas-esportivas" element={<MenuPage title="Apostas" />} />
+        <Route path="/apostas-esportivas" element={<MenuPage title="Apostas esportivas" />} />
         <Route path="/cassino" element={<MenuPage title="Cassino" />} />
 
         <Route
