@@ -35,6 +35,21 @@ A saida fica em dist.
 
 A publicacao usa gh-pages e envia a pasta dist para a branch gh-pages.
 
+### Dominio customizado (evitar reset no GitHub Pages)
+
+Defina o dominio no package.json deste projeto, no campo config.pagesCname:
+
+"config": {
+	"pagesCname": "seu-dominio.com"
+}
+
+Quando voce executar pnpm deploy, o script compartilhado em ../shared/scripts/deploy-pages.mjs vai publicar com o parametro -c e manter o CNAME da branch gh-pages.
+
+Se preferir, voce pode sobrescrever no momento do deploy com variavel de ambiente:
+
+Windows PowerShell:
+$env:PAGES_CNAME="seu-dominio.com"; pnpm deploy
+
 ### Primeira publicacao
 
 1. Rode:
