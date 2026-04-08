@@ -12,7 +12,6 @@ function App() {
       <Route path="/" element={<Navigate to="/sobre" replace />} />
 
       <Route element={<SiteLayout />}>
-        <Route path="/menu" element={<MenuPage />} />
         <Route path="/apostas-esportivas" element={<MenuPage title="Apostas esportivas" />} />
         <Route path="/cassino" element={<MenuPage title="Cassino" />} />
 
@@ -35,7 +34,6 @@ function App() {
         />
 
         <Route path="/sobre" element={<ContatosPage />} />
-        <Route path="/contatos" element={<Navigate to="/sobre" replace />} />
       </Route>
 
       <Route path="*" element={<Navigate to="/sobre" replace />} />

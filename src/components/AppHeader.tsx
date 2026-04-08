@@ -3,7 +3,7 @@ import logo from "../../assets/img/litaldi_bet_2.png"
 import "../../assets/css/AppHeader.css"
 
 const navItems = [
-  { label: "Apostas", path: "/apostas-esportivas" },
+  { label: "Apostas esportivas", path: "/apostas-esportivas" },
   { label: "Cassino", path: "/cassino" },
   { label: "Promoções", path: "/promocoes" },
   { label: "Blog", path: "/blog" },
