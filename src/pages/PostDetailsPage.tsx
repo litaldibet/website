@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useLocation, useParams } from "react-router-dom"
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom"
 import { isLoadCardsSuccessResponse } from "@shared/contracts/loadCards"
 import { isLoadPostSuccessResponse, type PostDetails } from "@shared/contracts/loadPost"
 import type { PostCategory } from "@shared/domain/postCategory"
@@ -17,6 +17,7 @@ type PostDetailsPageProps = {
 
 type PostLocationState = {
   postId?: string
+  sourceListPath?: "/promocoes" | "/blog"
 }
 
 function extractErrorMessage(data: unknown, status: number): string {
@@ -42,6 +43,7 @@ async function resolvePostIdFromSlug(slug: string, category: PostCategory): Prom
 export default function PostDetailsPage({ category, listPath }: PostDetailsPageProps) {
   const { slug } = useParams<{ slug: string }>()
   const location = useLocation()
+  const navigate = useNavigate()
 
   const [loading, setLoading] = useState(true)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
@@ -144,21 +146,44 @@ export default function PostDetailsPage({ category, listPath }: PostDetailsPageP
     )
   }
 
+  function handleGoBack() {
+    const state = (location.state as PostLocationState | null) ?? null
+
+    if (state?.sourceListPath === listPath) {
+      navigate(-1)
+      return
+    }
+
+    navigate(listPath)
+  }
+
   return (
-    <article className="post-details-article">
-      <img
-        src={post.banner_url}
-        alt={post.title}
-        className="post-details-banner"
-      />
+    <section className="post-details-page">
+      <article className="post-details-article">
+        <img
+          src={post.banner_url}
+          alt={post.title}
+          className="post-details-banner"
+        />
 
-      <div className="post-details-content">
-        <h1 className="post-details-title">
-          {post.title}
-        </h1>
+        <div className="post-details-content">
+          <h1 className="post-details-title">
+            {post.title}
+          </h1>
 
-        <MarkdownRenderer markdown={post.content_markdown} postId={post.id} />
+          <MarkdownRenderer markdown={post.content_markdown} postId={post.id} />
+        </div>
+      </article>
+
+      <div className="post-details-actions">
+        <button
+          type="button"
+          className="post-details-go-back-button"
+          onClick={handleGoBack}
+        >
+          Voltar
+        </button>
       </div>
-    </article>
+    </section>
   )
 }
